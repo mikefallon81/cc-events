@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const readingList = document.querySelector('#reading-list');
+
   const form = document.querySelector('#new-item-form');
   form.addEventListener('submit', (e) => {
     console.dir(e.target);
     e.preventDefault();
-    const readingList = document.querySelector('#reading-list');
     const newDiv = document.createElement('div');
     newDiv.classList.add('list-item');
 
@@ -20,5 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
     readingList.appendChild(newDiv);
 
     e.target.reset();
+  });
+
+  const deleteButton = document.querySelector('#delete-all');
+  deleteButton.addEventListener('click', (e) => {
+    while (readingList.firstChild) {
+      readingList.removeChild(readingList.firstChild);
+    }
   });
 });
