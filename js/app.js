@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     const readingList = document.querySelector('#reading-list');
     const newDiv = document.createElement('div');
+    newDiv.classList.add('list-item');
 
     const titleHeader = document.createElement('h2');
     titleHeader.textContent = e.target.title.value;
