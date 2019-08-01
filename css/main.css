@@ -21,3 +21,17 @@ input {
 button {
   margin: 10px 0;
 }
+
+#reading-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  min-width: 200px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid grey;
+  background-color: cornflowerblue;
+  border-radius: 5px;
+}
